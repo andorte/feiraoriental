@@ -119,3 +119,12 @@ release: clean ## Creates release
 	npm run build
 	python setup.py sdist bdist_wheel
 	twine upload -s dist/*
+
+bash:
+	sudo docker exec -u 0 -it fo_web bash
+
+up:
+	sudo docker-compose -f docker-compose.yml up
+
+build:
+	sudo docker-compose -f docker-compose.yml up --build
